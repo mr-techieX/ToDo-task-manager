@@ -1,0 +1,141 @@
+/* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Common styles for App */
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Theme Styles */
+.App.light {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Dark Theme Styles */
+.App.dark {
+  background-color: #333;
+  color: #f4f4f9;
+}
+
+h1 {
+  text-align: center;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form select {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.task-form button {
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background-color: #4cae4c;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  background-color: #e9ecef;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.task-item h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.task-item p {
+  margin: 5px 0;
+}
+
+/* Dark mode styles for task item */
+.App.dark .task-item {
+  background-color: #444;
+}
+
+.task-item button {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background-color: #dc3545;
+}
+
+.task-item button:hover {
+  background-color: #c82333;
+}
+
+.sorting-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sorting-buttons button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sorting-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  .task-form input,
+  .task-form select,
+  .task-form button,
+  .task-item button {
+    width: 100%;
+  }
+
+  .sorting-buttons {
+    flex-direction: column;
+  }
+
+  .sorting-buttons button {
+    margin-bottom: 10px;
+  }
+}
